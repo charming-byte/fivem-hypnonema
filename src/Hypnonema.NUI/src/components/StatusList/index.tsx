@@ -21,6 +21,7 @@ interface StatusListProps {
   onResume: Function;
   onStop: Function;
   onRepeat: Function;
+  onVolume: Function;
 }
 
 export const StatusList: FC<StatusListProps> = (props) => {
@@ -52,6 +53,7 @@ export const StatusList: FC<StatusListProps> = (props) => {
                       onRepeat={props.onRepeat}
                       onPause={props.onPause}
                       onResume={props.onResume}
+                      onVolume={props.onVolume}
                     />
                   ))
                 ) : (

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import {
   Accordion,
   AccordionDetails,
@@ -9,6 +9,7 @@ import {
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { DuiState } from "../../types/duiState";
 import { CurrentTrack } from "../CurrentTrack";
+import { useNuiEvent, useNuiRequest } from "fivem-nui-react-lib";
 
 interface StatusComponentProps {
   duiState: DuiState;
@@ -17,6 +18,7 @@ interface StatusComponentProps {
   onPause: Function;
   onResume: Function;
   onRepeat: Function;
+  onVolume: Function;
 }
 
 export const StatusComponent: FC<StatusComponentProps> = (props) => {
@@ -46,6 +48,25 @@ export const StatusComponent: FC<StatusComponentProps> = (props) => {
   const onRepeat = (repeat: boolean) => {
     props.onRepeat(props.duiState.screenName, repeat);
   };
+  const { send } = useNuiRequest();
+
+  const [volume, setVolume] = useState<number>(100);
+
+  useEffect(() => {
+    send(
+      `getPlayerVolume:${props.duiState.screenName.replace(/\s+/g, "")}`
+    ).then(() => {});
+  }, [send, props.duiState.screenName]);
+
+  useNuiEvent<number>(
+    "hypnonema",
+    `getPlayerVolume:${props.duiState.screenName.replace(/\s+/g, "")}`,
+    (r) => setVolume(r)
+  );
+
+  const onVolumeChange = (volume: number) => {
+    props.onVolume(volume, props.duiState.screenName);
+  };
 
   return (
     <div style={{ marginTop: "1rem" }}>
@@ -74,6 +95,8 @@ export const StatusComponent: FC<StatusComponentProps> = (props) => {
             onPause={onPause}
             onRepeat={onRepeat}
             onResume={onResume}
+            volume={volume}
+            onVolumeChange={onVolumeChange}
           />
         </AccordionDetails>
       </Accordion>

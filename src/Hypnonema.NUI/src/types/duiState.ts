@@ -1,3 +1,5 @@
+import Screen from "./screen";
+
 export interface DuiState {
   screenName: string;
   isPaused: boolean;

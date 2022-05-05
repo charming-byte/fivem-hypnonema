@@ -9,16 +9,20 @@ export const StatusPage: FC = () => {
   const duiStates = useAppSelector((state) => state.dui.duiStates);
   const { send } = useNuiRequest();
 
-  /*
-          useEffect(() => {
-            send("requestState").then(() => {});
-          }, [send]);
-      */
-
   const onSeekHandler = useMemo(
     () =>
       debounce((time: number, screenName: string) => {
         send("seek", { screenName, time }).then(() => {});
+      }, 300),
+    [send]
+  );
+
+  const onVolumeHandler = useMemo(
+    () =>
+      debounce((volume: number, screenName: string) => {
+        send(`setPlayerVolume:${screenName.replace(/\s+/g, "")}`, {
+          volume,
+        }).then(() => {});
       }, 300),
     [send]
   );
@@ -46,6 +50,7 @@ export const StatusPage: FC = () => {
       <StatusList
         duiStates={duiStates}
         onSeek={onSeekHandler}
+        onVolume={onVolumeHandler}
         onStop={onStop}
         onResume={onResume}
         onPause={onPause}

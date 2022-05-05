@@ -80,7 +80,7 @@ Below is a list of all available permission settings.
 ### Example permission config
 To restrict creating / editing screens to admins only but allow everyone to control the playback use following settings.
 ```
-add_ace group.admin hypnonema.screens allow
+add_ace group.admin hypnonema allow
 add_ace builtin.everyone hypnonema.playback allow
 ```
 

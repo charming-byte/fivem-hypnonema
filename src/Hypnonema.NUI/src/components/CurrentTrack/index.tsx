@@ -4,12 +4,15 @@ import PauseIcon from "@mui/icons-material/Pause";
 import StopIcon from "@mui/icons-material/Stop";
 import { IconButton, Slider, Stack, Tooltip, Typography } from "@mui/material";
 import RepeatIcon from "@mui/icons-material/Repeat";
+import { VolumePopover } from "../VolumePopover";
 
 interface CurrentTrackProps {
   isPaused: boolean;
   startedAt: string;
   duration: number;
   repeat: boolean;
+  volume: number;
+  onVolumeChange: Function;
   onSeek: Function;
   onResume: Function;
   onPause: Function;
@@ -83,6 +86,10 @@ export const CurrentTrack: FC<CurrentTrackProps> = (props) => {
             <RepeatIcon />
           </IconButton>
         </Tooltip>
+        <VolumePopover
+          volume={props.volume}
+          onVolumeChange={props.onVolumeChange}
+        />
         <Stack
           spacing={2}
           direction="row"
