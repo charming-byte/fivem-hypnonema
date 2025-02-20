@@ -12,7 +12,7 @@
 
 -- The url to your webserver
 -- Hint: This is optional! You may want to stay with the default (https://all-in-simplicity.github.io/fivem-hypnonema/)
-hypnonema_url 'https://all-in-simplicity.github.io/fivem-hypnonema/'
+hypnonema_url 'https://juca-scripts.github.io/fivem-hypnonema/'
 
 -- If you want to see a custom splash screen / poster
 hypnonema_poster_url 'https://i.imgur.com/dPaIjEW.jpg'
