@@ -48,7 +48,7 @@ jobs:
         run: dotnet restore Hypnonema.sln
 
       - name: Build the solution
-        run: dotnet build -c Release -o Build /p:Version=${{env.ASSEMBLYSEMVER}} Hypnonema.sln
+        run: dotnet build -c Release /p:Version=${{env.ASSEMBLYSEMVER}} Hypnonema.sln
 
       - run: mv -f libs/Newtonsoft.Json.dll  src/Hypnonema.Client/bin/Release/net452/
       
