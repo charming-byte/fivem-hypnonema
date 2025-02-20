@@ -11,8 +11,8 @@
 ]]--
 
 -- The url to your webserver
--- Hint: This is optional! You may want to stay with the default (https://all-in-simplicity.github.io/fivem-hypnonema/)
-hypnonema_url 'https://all-in-simplicity.github.io/fivem-hypnonema/'
+-- Hint: This is optional! You may want to stay with the default (https://charming-byte.github.io/fivem-hypnonema/)
+hypnonema_url 'https://charming-byte.github.io/fivem-hypnonema/'
 
 -- If you want to see a custom splash screen / poster
 hypnonema_poster_url 'https://i.imgur.com/dPaIjEW.jpg'
@@ -50,4 +50,4 @@ files {
 author 'simpled-dev'
 version '2.0.0'
 description 'a Media Player Resource for FiveM'
-repository 'https://github.com/thiago-dev/fivem-hypnonema'
+repository 'https://github.com/charming-byte/fivem-hypnonema'
