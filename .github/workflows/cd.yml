@@ -64,13 +64,14 @@ jobs:
       - name: Prepare build artifact
         shell: bash
         run: |
-          mkdir -p build/client/html && mkdir build/server && mkdir build/wwwroot
-          cp src/Hypnonema.Client/bin/Release/net452/* build/client/ && rm build/client/CitizenFX.Core.Client.dll
-          cp src/Hypnonema.Server/bin/Release/netstandard2.0/* build/server/ && rm build/server/CitizenFX.Core.Server.dll
-          cp -r {README.md,LICENSE.md,stream} build
-          cp src/{fxmanifest.lua,permissions.cfg} build
-          cp src/Hypnonema.DUI/dist/index.html build/wwwroot
-          cp -r src/Hypnonema.NUI/build build/client/html
+          mkdir -p build/hypnonema/client/html && mkdir build/hypnonema/server && mkdir build/hypnonema/wwwroot
+          cp src/Hypnonema.Client/bin/Release/net452/* build/hypnonema/client/ && rm build/hypnonema/client/CitizenFX.Core.Client.dll
+          cp src/Hypnonema.Server/bin/Release/netstandard2.0/* build/hypnonema/server/ && rm build/hypnonema/server/CitizenFX.Core.Server.dll
+          cp -r {README.md,LICENSE.md,stream} build/hypnonema/
+          cp src/{fxmanifest.lua,permissions.cfg} build/hypnonema/
+          cp src/Hypnonema.DUI/dist/index.html build/hypnonema/wwwroot
+          cp -r src/Hypnonema.NUI/build build/hypnonema/client/html
+          cp example_map/hypnonema-map.zip build/
 
       - uses: vimtor/action-zip@v1
         with:
