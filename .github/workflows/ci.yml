@@ -50,7 +50,7 @@ jobs:
       - name: Build the solution
         run: dotnet build -c Release -o Build /p:Version=${{env.ASSEMBLYSEMVER}} Hypnonema.sln
 
-      - run: mv -force libs/Newtonsoft.Json.dll  src/Hypnonema.Client/bin/Release/net452/
+      - run: mv -f libs/Newtonsoft.Json.dll  src/Hypnonema.Client/bin/Release/net452/
       
       - name: Setup node 
         uses: actions/setup-node@v2
