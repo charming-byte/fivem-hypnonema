@@ -72,7 +72,7 @@ jobs:
           cp -r {README.md,LICENSE.md,stream} build/hypnonema/
           cp src/{fxmanifest.lua,permissions.cfg} build/hypnonema/
           cp src/Hypnonema.DUI/dist/index.html build/hypnonema/wwwroot
-          cp -r src/Hypnonema.NUI/build build/hypnonema/client/html
+          cp -r src/Hypnonema.NUI/build/* build/hypnonema/client/html/
           cp example_map/hypnonema-map.zip build/
 
       - name: Attach Zip as build artifact
