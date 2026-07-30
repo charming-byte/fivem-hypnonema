@@ -173,7 +173,7 @@
                     this.DuiStateList.Remove(duiStateChangedMessage.ScreenName);
                     break;
                 case DuiStateChangedMessage.ChangeTypeEnum.Created:
-                    this.DuiStateList.Add(duiStateChangedMessage.ScreenName, duiStateChangedMessage.DuiState);
+                    this.DuiStateList[duiStateChangedMessage.ScreenName] = duiStateChangedMessage.DuiState;
                     break;
                 case DuiStateChangedMessage.ChangeTypeEnum.Updated:
                     this.DuiStateList[duiStateChangedMessage.ScreenName] = duiStateChangedMessage.DuiState;
