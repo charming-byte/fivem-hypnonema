@@ -6,7 +6,7 @@
 ![GitHub issues](https://img.shields.io/github/issues-raw/charming-byte/fivem-hypnonema?style=flat-square)
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-<div align="center">
+<div style="text-align:center">
 <p>
     A synchronized media player resource for <a href="https://fivem.net">FiveM</a>.
     <br />
@@ -17,8 +17,8 @@
     ·
     <a href="https://github.com/charming-byte/fivem-hypnonema/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
   </p>
-[![Hypnonema](https://raw.githubusercontent.com/charming-byte/fivem-hypnonema/gh-pages/Hypnonema.jpg)](https://raw.githubusercontent.com/charming-byte/fivem-hypnonema/gh-pages/HypnonemaTitle.jpg "Hypnonema")
-</div>
+    <img src="https://raw.githubusercontent.com/charming-byte/fivem-hypnonema/gh-pages/Hypnonema.jpg" /></div>
+
 ## 📌 Table of Contents
 
 - [Features](#features)
