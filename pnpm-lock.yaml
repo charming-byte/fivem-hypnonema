@@ -18,9 +18,17 @@ importers:
         specifier: ^2.5.4
         version: 2.5.5
 
-  apps/client-script: {}
+  apps/client-script:
+    dependencies:
+      '@hypnonema/shared-library':
+        specifier: workspace:*
+        version: link:../../packages/shared-library
 
-  apps/server-script: {}
+  apps/server-script:
+    dependencies:
+      '@hypnonema/shared-library':
+        specifier: workspace:*
+        version: link:../../packages/shared-library
 
   apps/user-interface:
     dependencies:

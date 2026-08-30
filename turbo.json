@@ -9,6 +9,7 @@
       "outputs": ["dist/**"]
     },
     "generate-types": {
+      "dependsOn": ["^build"],
       "inputs": ["./**/*.cs", "./*.cs"],
       "outputs": ["../../packages/generated-types/src/**"]
     },

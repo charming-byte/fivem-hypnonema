@@ -6,6 +6,7 @@ build.bat
 ## Angular ##
 # compiled output
 /dist
+apps/**/dist/
 /tmp
 /app/**/*.js
 /app/**/*.js.map

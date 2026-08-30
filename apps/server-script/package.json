@@ -6,5 +6,8 @@
       "build": "pnpm run restore && dotnet build",
       "restore": "dotnet restore",
       "generate-types": "dotnet build"
+    },
+    "dependencies": {
+      "@hypnonema/shared-library": "workspace:*"
     }
 }
