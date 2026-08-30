@@ -32,7 +32,7 @@
 	<ItemGroup>
 		<PackageReference Include="CitizenFX.Core.Server" Version="1.0.26803" ExcludeAssets="runtime" PrivateAssets="all" />
 		<PackageReference Include="DotNetZip" Version="1.16.0" />
-		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+		<PackageReference Include="Newtonsoft.Json" Version="12.0.2" ExcludeAssets="compile;runtime" GeneratePathProperty="true" />
 		<PackageReference Include="Serilog" Version="4.4.0" />
 		<PackageReference Include="Serilog.Sinks.Console" Version="6.1.1" />
 		<PackageReference Include="YamlDotNet" Version="18.1.0" />
@@ -43,6 +43,10 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\..\packages\shared-library\Hypnonema.Shared.csproj" />
+		<Reference Include="Newtonsoft.Json">
+			<HintPath>$(PkgNewtonsoft_Json)\lib\portable-net40+sl5+win8+wp8+wpa81\Newtonsoft.Json.dll</HintPath>
+			<Private>true</Private>
+		</Reference>
 	</ItemGroup>
 
 	<ItemGroup>

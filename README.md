@@ -83,7 +83,7 @@ Anything not on this list will not play, even if the link works fine in a browse
 4. Add the following to your `server.cfg`:
 
    ```cfg
-   exec @hypnonema/permissions.cfg
+   exec @hypnonema/config/permissions.cfg
    ensure hypnonema
    ensure hypnonema-map
    ```
