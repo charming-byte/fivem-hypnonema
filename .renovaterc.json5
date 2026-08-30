@@ -1,0 +1,143 @@
+{
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"extends": [
+		"config:recommended",
+		":dependencyDashboard",
+		":disableRateLimiting",
+		":semanticCommits",
+	],
+	"timezone": "Europe/Berlin",
+	"labels": [
+		"dependencies",
+		"renovate"
+	],
+	"dependencyDashboard": true,
+	dependencyDashboardTitle: "Renovate Dashboard",
+	"rangeStrategy": "bump",
+	"rebaseWhen": "auto",
+	"packageRules": [
+		{
+			"description": "Group all non-major NuGet updates",
+			"matchManagers": [
+				"nuget"
+			],
+			"matchUpdateTypes": [
+				"minor",
+				"patch"
+			],
+			"groupName": "NuGet minor and patch dependencies",
+			"groupSlug": "nuget-minor-patch",
+			"automerge": false
+		},
+		{
+			"description": "Require manual review for major NuGet updates",
+			"matchManagers": [
+				"nuget"
+			],
+			"matchUpdateTypes": [
+				"major"
+			],
+			"dependencyDashboardApproval": true,
+			"automerge": false
+		},
+		{
+			"description": "Group .NET SDK and tool updates",
+			"matchManagers": [
+				"nuget"
+			],
+			"matchDepTypes": [
+				"dotnet-sdk",
+				"dotnet-tools"
+			],
+			"groupName": ".NET SDK and tools",
+			"groupSlug": "dotnet-sdk-tools",
+			"automerge": false
+		},
+		{
+			"description": "Keep Microsoft packages grouped",
+			"matchManagers": [
+				"nuget"
+			],
+			"matchPackageNames": [
+				"/^Microsoft\\./",
+				"/^System\\./"
+			],
+			"groupName": "Microsoft .NET packages",
+			"groupSlug": "microsoft-dotnet"
+		},
+		{
+			description: "Auto-merge GitHub Actions",
+			matchManagers: [
+				"github-actions"
+			],
+			automerge: true,
+			automergeType: "branch",
+			matchUpdateTypes: [
+				"minor",
+				"patch",
+				"digest"
+			],
+			minimumReleaseAge: "3 days",
+			ignoreTests: true,
+		},
+		{
+			description: "Auto-merge trusted GitHub Actions",
+			matchManagers: [
+				"github-actions"
+			],
+			matchPackageNames: [
+				"/^actions\//",
+				"/^renovatebot\//"
+			],
+			automerge: true,
+			automergeType: "branch",
+			matchUpdateTypes: [
+				"minor",
+				"patch",
+				"digest"
+			],
+			minimumReleaseAge: "1 minute",
+			ignoreTests: true,
+		},
+		{
+			matchManagers: [
+				"github-actions"
+			],
+			addLabels: [
+				"renovate/github-action"
+			],
+		},
+		{
+			matchDatasources: [
+				"github-releases"
+			],
+			addLabels: [
+				"renovate/github-release"
+			],
+		},
+		{
+			matchUpdateTypes: [
+				"major"
+			],
+			labels: [
+				"type/major"
+			],
+		},
+		{
+			matchUpdateTypes: [
+				"minor"
+			],
+			labels: [
+				"type/minor"
+			],
+		},
+		{
+			matchUpdateTypes: [
+				"patch"
+			],
+			labels: [
+				"type/patch"
+			],
+		},
+	]
+}
