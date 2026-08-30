@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net481</TargetFramework>
+		<LangVersion>latest</LangVersion>
+		<Nullable>enable</Nullable>
+		<DebugType>embedded</DebugType>
+		<!-- 2.0.0 is the local/dev default; CI overrides it via the VERSION environment variable (or -p:Version=). -->
+		<Version Condition="'$(Version)' == ''">2.0.0</Version>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Remove="dist\**" />
+		<EmbeddedResource Remove="dist\**" />
+		<None Remove="dist\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Newtonsoft.Json" Version="12.0.2" Exclude="runtime" />
+
+	</ItemGroup>
+
+
+</Project>

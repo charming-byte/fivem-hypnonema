@@ -1,0 +1,13 @@
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden !important;
+  background-color: transparent !important;
+  margin: 0;
+}
+
+#root {
+  height: 100vh;
+  position: relative;
+}

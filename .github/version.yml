@@ -1,6 +1,42 @@
-mode: ContinuousDeployment
+# GitVersion configuration (GitVersion 5.x)
+#
+# The version is derived from the commit history: GitVersion takes the most
+# recent release tag (v<x.y.z>) and applies ONE increment based on the
+# Conventional Commit messages added since that tag.
+#
+#   feat!: ... / <type>!: ... / body contains "BREAKING CHANGE"  -> major
+#   feat: ...                                                     -> minor
+#   fix: ... / perf: ...                                          -> patch
+#   anything else                                                 -> patch (branch default)
+#
+# `next-version` is the floor for the first tag cut from this config (the v2
+# rewrite); afterwards the latest tag drives it.
+mode: ContinuousDelivery
+next-version: 2.0.0
+
+commit-message-incrementing: Enabled
+major-version-bump-message: '^\w+(\([^)]*\))?!:|BREAKING[ -]CHANGE'
+minor-version-bump-message: '^feat(\([^)]*\))?:'
+patch-version-bump-message: '^(fix|perf)(\([^)]*\))?:'
+
 branches:
-  master:
-    tag: beta
-  hotfix:
-    tag: useBranchName
+  main:
+    regex: ^master$|^main$
+    tag: ""
+    increment: Patch
+  develop:
+    regex: ^develop$
+    tag: alpha
+    increment: Patch
+    source-branches: ["main"]
+  feature:
+    regex: ^features?[/-]
+    tag: alpha
+    source-branches: ["develop", "main"]
+  pull-request:
+    regex: ^(pull|pull\-requests|pr)[/-]
+    tag: pr
+    source-branches: ["develop", "main"]
+
+ignore:
+  sha: []

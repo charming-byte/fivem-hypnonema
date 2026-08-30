@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net481</TargetFramework>
+		<LangVersion>latest</LangVersion>
+		<Nullable>enable</Nullable>
+		<!-- 2.0.0 is the local/dev default; CI overrides it via the VERSION environment variable (or -p:Version=). -->
+		<Version Condition="'$(Version)' == ''">2.0.0</Version>
+		<AssemblyName>Hypnonema.Client.net</AssemblyName>
+		<OutDir>.\dist\</OutDir>
+		<DebugType>embedded</DebugType>
+		<AllowedReferenceRelatedFileExtensions>none</AllowedReferenceRelatedFileExtensions>
+		<!-- node_modules holds the pnpm symlink to @hypnonema/shared-library; keep the SDK
+		     glob out of it (and out of dist) so its .cs / obj AssemblyInfo don't get compiled in. -->
+		<DefaultItemExcludes>$(DefaultItemExcludes);node_modules\**;dist\**</DefaultItemExcludes>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Remove="dist\**" />
+		<EmbeddedResource Remove="dist\**" />
+		<None Remove="dist\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="CitizenFX.Core.Client"
+		                  Version="1.0.26803"
+		                  ExcludeAssets="runtime"
+		                  PrivateAssets="all" />
+	
+		<PackageReference Include="DotNetZip"
+		                  Version="1.15.0" />
+
+		<PackageReference Include="Newtonsoft.Json"
+		                  Version="12.0.2"
+		                  ExcludeAssets="compile;runtime"
+		                  GeneratePathProperty="true" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\packages\shared-library\Hypnonema.Shared.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="Microsoft.CSharp" />
+
+		<Reference Include="Newtonsoft.Json">
+			<HintPath>$(PkgNewtonsoft_Json)\lib\portable-net40+sl5+win8+wp8+wpa81\Newtonsoft.Json.dll</HintPath>
+			<Private>true</Private>
+		</Reference>
+	</ItemGroup>
+</Project>

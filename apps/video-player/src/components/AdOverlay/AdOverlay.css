@@ -1,0 +1,108 @@
+.ad-overlay {
+	position: absolute;
+	inset: 0;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #000;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 400ms ease;
+}
+
+.ad-overlay.active {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.ad-overlay__thumbnail {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	filter: brightness(0.5) blur(6px);
+	transform: scale(1.05);
+}
+
+.ad-overlay__scrim {
+	position: absolute;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.45);
+}
+
+.ad-overlay__content {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 12px;
+	color: #fff;
+	font-family: sans-serif;
+	text-align: center;
+}
+
+.ad-overlay__badge {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+}
+
+.ad-overlay__badge-dot {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #e53935;
+}
+
+.ad-overlay__title {
+	margin: 0;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.ad-overlay__subtitle {
+	margin: 0;
+	font-size: 13px;
+	opacity: 0.75;
+}
+
+.ad-overlay__dots {
+	display: flex;
+	gap: 6px;
+	margin-top: 4px;
+}
+
+.ad-overlay__dots span {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #fff;
+	animation: ad-overlay-pulse 1.2s ease-in-out infinite;
+}
+
+.ad-overlay__dots span:nth-child(2) {
+	animation-delay: 0.2s;
+}
+
+.ad-overlay__dots span:nth-child(3) {
+	animation-delay: 0.4s;
+}
+
+@keyframes ad-overlay-pulse {
+	0%,
+	80%,
+	100% {
+		opacity: 0.25;
+		transform: scale(0.75);
+	}
+	40% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
