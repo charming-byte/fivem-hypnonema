@@ -11,6 +11,9 @@
 		<DebugType>portable</DebugType>
 		<OutDir>.\dist\</OutDir>
 		<AllowedReferenceRelatedFileExtensions>none</AllowedReferenceRelatedFileExtensions>
+		<!-- node_modules holds the pnpm symlink to @hypnonema/shared-library; keep the SDK
+		     glob out of it (and out of dist) so its .cs / obj AssemblyInfo don't get compiled in. -->
+		<DefaultItemExcludes>$(DefaultItemExcludes);node_modules\**;dist\**</DefaultItemExcludes>
 	</PropertyGroup>
 
 	<ItemGroup>
