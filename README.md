@@ -23,16 +23,16 @@
 
 ## 📌 Table of Contents
 
-- [Features](#features)
-- [Demo](#demo)
-- [Requirements](#requirements)
-- [Installation](#installation)
-- [Permissions](#permissions)
-- [Customization](#customization)
-- [Exports](#exports)
-- [Events](#events)
-- [Support](#support)
-- [License](#license)
+- [Features](#-features)
+- [Demo](#-demo)
+- [Requirements](#️-requirements)
+- [Installation](#-installation)
+- [Permissions](#-permissions)
+- [Customization](#️-customization)
+- [Exports](#-exports)
+- [Events](#-events)
+- [Support](#-support)
+- [License](#-license)
 
 ## ✨ Features
 
