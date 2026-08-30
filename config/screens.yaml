@@ -1,31 +1,32 @@
 ---
 screens:
-  - name: Hypnonema
-    renderDistance: 200
-    audio:
-      mode: default
-      attenuation:
-        minDistance: 20
-        maxDistance: 150
-        occludedVolume: 0.4
-    scaleform:
-      texture:
-        dimension:
-          width: 1280
-          height: 720
-        position:
-          x: 0
-          y: 0
-      transform:
-        position:
-          x: -1678.949
-          y: -928.3431
-          z: 21.129
-        rotation:
-          x: 0
-          y: 0
-          z: -140
-        scale:
-          x: 0.945
-          y: 0.55
-          z: -0.1
+- id: hypnonema
+  name: Hypnonema
+  scaleform:
+    transform:
+      position:
+        x: -1687.86072
+        y: -921.22876
+        z: 14.8889122
+      rotation:
+        x: 0.00272376044
+        y: -2.37698969E-05
+        z: -139.5
+      scale:
+        x: 23.83311
+        y: 13.4061251
+        z: -0.1
+    texture:
+      dimension:
+        height: 720
+        width: 1280
+      position:
+        x: 0
+        y: 0
+  renderDistance: 200
+  audio:
+    mode: default
+    attenuation:
+      minDistance: 20
+      maxDistance: 150
+      occludedVolume: 0.4
