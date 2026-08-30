@@ -6,7 +6,7 @@ disableIdleCam: true
 commandName: "hypnonema"
 
 # The log level at which logs are printed. Supported logLevels are verbose | debug | info | warning | error
-logLevel: "warn"
+logLevel: "warning"
 
 # The default range at where active mediaPlayers are visible/audible.
 defaultRange: 300.0
@@ -30,12 +30,12 @@ youtubeAdQuorum:
 
   # The maximum time to wait for ad compensation before playback continues.
   # Format: hh:mm:ss. The default is 60 seconds.
-  waitTimeout: 00:00:45
+  waitTimeout: 00:01:00
 
 dui:
   # The url on which the video-player is accessed through dui. You can put this on your own http server if you know what you are doing.
   # Alternative: nui://hypnonema/wwwroot/index.html
-  url: "https://charming-byte.github.io/fivem-hypnonema/v2.0.0/"
+  url: "https://charming-byte.github.io/fivem-hypnonema/v2.0.0"
 
   # The time to wait in ms on a connection to the DUI page. Format: hh:mm:ss !
   timeout: 00:00:05
