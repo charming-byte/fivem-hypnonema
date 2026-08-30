@@ -1,0 +1,96 @@
+name: "Bug Report"
+description: Report a bug in Hypnonema
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear and concise description of what the bug is.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Affected component
+      description: Which part of Hypnonema does this bug affect?
+      options:
+        - client-script
+        - server-script
+        - user-interface
+        - video-player
+        - Other/Unknown
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro-steps
+    attributes:
+      label: Steps to reproduce
+      description: Steps to reproduce the behavior.
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected behavior
+      description: A clear and concise description of what you expected to happen.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual behavior
+      description: A clear and concise description of what actually happened.
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Hypnonema version / commit
+      description: Release tag or commit hash you are running.
+      placeholder: e.g. v1.4.0 or abc1234
+    validations:
+      required: true
+
+  - type: input
+    id: fivem-build
+    attributes:
+      label: FiveM server build
+      placeholder: e.g. 8332
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs / console output
+      description: Please copy and paste any relevant log or console output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Add any other context about the problem here.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: existing-search
+    attributes:
+      label: Existing issues
+      options:
+        - label: I searched existing issues and did not find a duplicate.
+          required: true

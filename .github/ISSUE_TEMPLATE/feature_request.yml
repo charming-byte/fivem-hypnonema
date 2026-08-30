@@ -1,0 +1,61 @@
+name: "Feature Request"
+description: Suggest an idea for Hypnonema
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: A brief explanation of the feature.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Affected component
+      description: Which part of Hypnonema would this feature affect?
+      options:
+        - client-script
+        - server-script
+        - user-interface
+        - video-player
+        - Other/Unknown
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Problem / Motivation
+      description: Why are we doing this? What use cases does it support? What is the expected outcome?
+      placeholder: |
+        e.g. As a server owner, I want to be able to set a per-screen default volume,
+        because right now every screen starts at the same volume and I have to adjust it manually each time.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed solution
+      description: Describe the solution you'd like, if you have one in mind.
+    validations:
+      required: false
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Describe any alternative solutions or features you've considered.
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Add any other context, links, or screenshots about the feature request here.
+    validations:
+      required: false

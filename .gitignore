@@ -16,7 +16,7 @@ build.bat
 
 # IDEs and editors
 /.idea
-
+.turbo/
 # misc
 /.sass-cache
 /connect.lock

@@ -1,0 +1,7 @@
+{
+  "assemblies": [ "dist/Hypnonema.Server.net.dll", "dist/Hypnonema.Shared.dll" ],
+  "generationSpecs": [ "TypesGenerationSpec" ],
+  "projectOutputFolder": "dist",
+  "clearOutputDirectory": true,
+  "outputPath": "../../packages/generated-types/src/"
+}

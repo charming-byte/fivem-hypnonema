@@ -1,0 +1,30 @@
+{
+  "$schema": "https://turborepo.com/schema.json",
+  "globalPassThroughEnv": ["USERPROFILE", "PATH", "APPDATA", "PROGRAMFILES(X86)", "PROGRAMFILES", "LOCALAPPDATA"],
+  "globalEnv": ["DEV", "VERSION"],
+  "tasks": {
+    "build": {
+      "dependsOn": ["generate-types", "^build"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "outputs": ["dist/**"]
+    },
+    "generate-types": {
+      "inputs": ["./**/*.cs", "./*.cs"],
+      "outputs": ["../../packages/generated-types/src/**"]
+    },
+    "@hypnonema/generated-types#build": {
+      "dependsOn": ["@hypnonema/server-script#build"],
+      "inputs": ["src/**"],
+      "outputs": ["dist/**"]
+    },
+    "lint": {},
+    "test": {
+      "dependsOn": ["^build"],
+      "outputs": []
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    }
+  }
+}

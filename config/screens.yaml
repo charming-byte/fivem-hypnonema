@@ -1,0 +1,31 @@
+---
+screens:
+  - name: Hypnonema
+    renderDistance: 200
+    audio:
+      mode: default
+      attenuation:
+        minDistance: 20
+        maxDistance: 150
+        occludedVolume: 0.4
+    scaleform:
+      texture:
+        dimension:
+          width: 1280
+          height: 720
+        position:
+          x: 0
+          y: 0
+      transform:
+        position:
+          x: -1678.949
+          y: -928.3431
+          z: 21.129
+        rotation:
+          x: 0
+          y: 0
+          z: -140
+        scale:
+          x: 0.945
+          y: 0.55
+          z: -0.1

@@ -1,0 +1,47 @@
+# Whether to disable the idle cam while media is playing.
+disableIdleCam: true
+
+# The command someone needs to enter for opening the menu.
+# Hint: no spaces, no special characters!
+commandName: "hypnonema"
+
+# The log level at which logs are printed. Supported logLevels are verbose | debug | info | warning | error
+logLevel: "warn"
+
+# The default range at where active mediaPlayers are visible/audible.
+defaultRange: 300.0
+
+# The maximum number of tracks that can be queued at once on a single media player.
+maxQueueSize: 10
+
+# Whether ACE permission checks (see permissions.cfg) are enforced on media player commands.
+# Set to false to let every player control every media player.
+permissionsEnabled: true
+
+# Whether the "/commandName" command itself requires the FiveM-native "command.<commandName>" ACE
+# permission to be run at all (checked before permissionsEnabled/permissions.cfg's hypnonema.* aces apply).
+# Set to true to restrict who can even type the command, e.g. for admin-only chat commands.
+commandRestricted: false
+
+# YouTube playback waits when this share of active viewers reports an ad.
+# Must be greater than 0 and at most 1. The default is 0.5 (50%).
+youtubeAdQuorum:
+  threshold: 0.5
+
+  # The maximum time to wait for ad compensation before playback continues.
+  # Format: hh:mm:ss. The default is 60 seconds.
+  waitTimeout: 00:00:45
+
+dui:
+  # The url on which the video-player is accessed through dui. You can put this on your own http server if you know what you are doing.
+  # Alternative: nui://hypnonema/wwwroot/index.html
+  url: "https://charming-byte.github.io/fivem-hypnonema/v2.0.0/"
+
+  # The time to wait in ms on a connection to the DUI page. Format: hh:mm:ss !
+  timeout: 00:00:05
+
+  # The screen width of the DUI browser.
+  width: 1280
+
+  # The screen height of the DUI browser.
+  height: 720
