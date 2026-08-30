@@ -228,6 +228,14 @@ PublishScripts/
 **/[Pp]ackages/*
 # except build/, which is used as an MSBuild target.
 !**/[Pp]ackages/build/
+# ...and except the repo-root pnpm workspace: packages/ here is source, not a NuGet restore dir.
+!/packages/
+!/packages/*/
+!/packages/**
+/packages/*/bin/
+/packages/*/obj/
+/packages/*/dist/
+/packages/**/.turbo/
 # Uncomment if necessary however generally it will be regenerated when needed
 #!**/[Pp]ackages/repositories.config
 # NuGet v3's project.json files produces more ignorable files
