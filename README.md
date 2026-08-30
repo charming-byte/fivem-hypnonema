@@ -15,8 +15,9 @@
      ·
     <a href="https://github.com/charming-byte/fivem-hypnonema/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
-    <a href="https://github.com/charming-byte/fivem-hypnonema/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>\
-    <br/>
+    <a href="https://github.com/charming-byte/fivem-hypnonema/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+    
+    <br />
         <img src="https://raw.githubusercontent.com/charming-byte/fivem-hypnonema/gh-pages/Hypnonema.jpg" />
   </p>
 </div>
