@@ -123,7 +123,7 @@
                 Events.GetMaxActiveScaleforms,
                 this.OnGetMaxActiveScaleforms);
 
-            await UpdateChecker.CheckForNewerVersion();
+            await UpdateChecker.CheckForUpdate();
             await Delay(0);
         }
 

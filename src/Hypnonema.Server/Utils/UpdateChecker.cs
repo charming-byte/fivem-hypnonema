@@ -1,52 +1,52 @@
-﻿namespace Hypnonema.Server.Utils
+using System;
+using System.Linq;
+using System.Net;
+using System.Reflection;
+using System.Threading.Tasks;
+using CitizenFX.Core;
+using Octokit;
+
+namespace Hypnonema.Server.Utils
 {
-    using System;
-    using System.Linq;
-    using System.Net;
-    using System.Reflection;
-    using System.Threading.Tasks;
-
-    using CitizenFX.Core;
-
-    using Octokit;
-
-    public class UpdateChecker
+    public sealed class UpdateChecker
     {
         private const string RepositoryName = "fivem-hypnonema";
 
-        private const string RepositoryOwner = "thiago-dev";
+        private const string RepositoryOwner = "charming-byte";
+
+        private static readonly GitHubClient Client = new GitHubClient( new ProductHeaderValue("hypnonema"));
 
         private static Version LocalVersion => new Version(GetAssemblyFileVersion());
 
-        public static async Task CheckForNewerVersion()
+        public static async Task CheckForUpdate()
         {
             ServicePointManager.ServerCertificateValidationCallback += (sender, cert, chain, sslPolicyErrors) => true;
-            var client = new GitHubClient(new ProductHeaderValue("hypnonema"));
 
             try
             {
-                var releases = await client.Repository.Release.GetAll(RepositoryOwner, RepositoryName);
-                if (releases == null) return;
+                var latestRelease = await Client.Repository.Release.GetLatest(RepositoryOwner, RepositoryName);
 
-                var latestVersion = new Version(releases[0].TagName);
+                var latestVersion = new Version(latestRelease.TagName);
 
                 var versionComparison = LocalVersion.CompareTo(latestVersion);
-                if (versionComparison < 0)
 
-                    // Newer Version found.
-                    Debug.WriteLine(
-                        $"^5There is a newer version \"{latestVersion}\" of Hypnonema available for download!");
+                if (versionComparison < 0)
+                {
+                    await BaseScript.Delay(1);
+
+                    Debug.WriteLine($"^3An update is available for hypnonema (current version: {LocalVersion})\n {latestRelease.HtmlUrl} ^7");
+                }
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                Console.WriteLine(e);
+                // Do nothing with the exception
             }
         }
 
         private static string GetAssemblyFileVersion()
         {
-            var attribute = (AssemblyFileVersionAttribute) Assembly.GetExecutingAssembly()
-                .GetCustomAttributes(typeof(AssemblyFileVersionAttribute), true).Single();
+            var attribute = (AssemblyFileVersionAttribute)Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyFileVersionAttribute), true).Single();
+
             return attribute.Version;
         }
     }

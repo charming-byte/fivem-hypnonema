@@ -41,7 +41,6 @@
 - Synchronized
 - All HTML5 supported audio and video types including HLS/DASH plus Twitch / YouTube / DailyMotion / Facebook / Vimeo / Streamable / Vidme / Wistia / SoundCloud
 - Multi-Screen capable (watch multiple movies at once)
-- ~~3D Spatialized Audio~~ *temporarily removed due to undergoing performance improvements*
 - NUI Frontend
 - ACE-Permissions
 - Live-Edit Feature (simplifies scaleform placement)

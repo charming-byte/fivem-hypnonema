@@ -121,7 +121,36 @@ export const ScreenForm: FC<ScreenFormProps> = (props) => {
       return errors;
     },
     onSubmit: (values) => {
-      props.onSubmit(values);
+      const screen = {
+        id: props.screen?.id || undefined,
+        name: values.name,
+        targetSettings: {
+          modelName: values.modelName,
+          renderTargetName: values.renderTargetName,
+        },
+        browserSettings: {
+          is3DAudioEnabled: true,
+          soundAttenuation: values.soundAttenuation,
+          soundMinDistance: values.soundMinDistance,
+          soundMaxDistance: values.soundMaxDistance,
+          globalVolume: 100,
+        },
+        positionalSettings: {
+          positionX: values.positionX,
+          positionY: values.positionY,
+          positionZ: values.positionZ,
+          rotationX: values.rotationX,
+          rotationY: values.rotationY,
+          rotationZ: values.rotationZ,
+          scaleX: values.scaleX,
+          scaleY: values.scaleY,
+          scaleZ: values.scaleZ,
+        },
+        alwaysOn: values.alwaysOn,
+        maxRenderDistance: values.maxRenderDistance,
+        is3DRendered: values.is3DRendered,
+      }
+      props.onSubmit(screen);
     },
   });
 
