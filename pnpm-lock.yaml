@@ -157,8 +157,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/generated-types
       '@xstate/react':
-        specifier: ^6.0.0
-        version: 6.0.0(@types/react@19.2.7)(react@19.2.1)(xstate@5.20.2)
+        specifier: ^6.1.0
+        version: 6.1.0(@types/react@19.2.7)(react@19.2.1)(xstate@5.33.2)
       react:
         specifier: ^19.1.1
         version: 19.2.1
@@ -169,8 +169,8 @@ importers:
         specifier: ^3.4.0
         version: 3.4.0(@svta/cml-cta@1.0.1(@svta/cml-structured-field-values@1.0.1(@svta/cml-utils@1.0.1))(@svta/cml-utils@1.0.1))(@svta/cml-structured-field-values@1.0.1(@svta/cml-utils@1.0.1))(@svta/cml-utils@1.0.1)(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       xstate:
-        specifier: ^5.20.2
-        version: 5.20.2
+        specifier: ^5.33.2
+        version: 5.33.2
     devDependencies:
       '@hypnonema/eslint-config':
         specifier: workspace:*
@@ -1469,11 +1469,11 @@ packages:
   '@vitest/utils@3.2.4':
     resolution: {integrity: sha512-fB2V0JFrQSMsCo9HiSq3Ezpdv4iYaXRG1Sx8edX3MwxfyNn83mKiGzOcH+Fkxt4MHxr3y42fQi1oeAInqgX2QA==}
 
-  '@xstate/react@6.0.0':
-    resolution: {integrity: sha512-xXlLpFJxqLhhmecAXclBECgk+B4zYSrDTl8hTfPZBogkn82OHKbm9zJxox3Z/YXoOhAQhKFTRLMYGdlbhc6T9A==}
+  '@xstate/react@6.1.0':
+    resolution: {integrity: sha512-ep9F0jGTI63B/jE8GHdMpUqtuz7yRebNaKv8EMUaiSi29NOglywc2X2YSOV/ygbIK+LtmgZ0q9anoEA2iBSEOw==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
-      xstate: ^5.20.0
+      xstate: ^5.28.0
     peerDependenciesMeta:
       xstate:
         optional: true
@@ -3412,8 +3412,8 @@ packages:
   xmlchars@2.2.0:
     resolution: {integrity: sha512-JZnDKK8B0RCDw84FNdDAIpZK+JuJw+s7Lz8nksI7SIuU3UXJJslUthsi+uWBUYOwPFwW7W7PRLRfUKpxjtjFCw==}
 
-  xstate@5.20.2:
-    resolution: {integrity: sha512-GZmLmc+WPKfFRxuTDAxCg0cUhS/ZnWaRD86DO8MKizeK4a050jd5k7UNnIQ2jJDWRig2/r0tmVXeezUNIhoz5Q==}
+  xstate@5.33.2:
+    resolution: {integrity: sha512-8tC7yXgeCvpT8gKEeEje6ikJJG1wpnoLiXe+HfECW8m10ubMd3QxKOwWA8KxPJVBcLwfdRoMKYxIBGYKmo37/A==}
 
   yallist@3.1.1:
     resolution: {integrity: sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==}
@@ -4608,13 +4608,13 @@ snapshots:
       loupe: 3.2.0
       tinyrainbow: 2.0.0
 
-  '@xstate/react@6.0.0(@types/react@19.2.7)(react@19.2.1)(xstate@5.20.2)':
+  '@xstate/react@6.1.0(@types/react@19.2.7)(react@19.2.1)(xstate@5.33.2)':
     dependencies:
       react: 19.2.1
       use-isomorphic-layout-effect: 1.2.1(@types/react@19.2.7)(react@19.2.1)
       use-sync-external-store: 1.5.0(react@19.2.1)
     optionalDependencies:
-      xstate: 5.20.2
+      xstate: 5.33.2
     transitivePeerDependencies:
       - '@types/react'
 
@@ -6805,7 +6805,7 @@ snapshots:
 
   xmlchars@2.2.0: {}
 
-  xstate@5.20.2: {}
+  xstate@5.33.2: {}
 
   yallist@3.1.1: {}
 
