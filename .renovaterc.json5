@@ -7,6 +7,9 @@
 		":semanticCommits",
 	],
 	"timezone": "Europe/Berlin",
+	"baseBranches": [
+		"develop"
+	],
 	"labels": [
 		"dependencies",
 		"renovate"
@@ -15,6 +18,15 @@
 	dependencyDashboardTitle: "Renovate Dashboard",
 	"rangeStrategy": "bump",
 	"rebaseWhen": "auto",
+	"postUpdateOptions": [
+		"pnpmDedupe"
+	],
+	"lockFileMaintenance": {
+		"enabled": true,
+		"schedule": [
+			"before 4am on monday"
+		]
+	},
 	"packageRules": [
 		{
 			"description": "Group all non-major NuGet updates",
@@ -66,12 +78,66 @@
 			"groupSlug": "microsoft-dotnet"
 		},
 		{
+			description: "Group npm dev tooling across the monorepo",
+			matchManagers: [
+				"npm"
+			],
+			matchPackageNames: [
+				"eslint",
+				"/^eslint-/",
+				"/^@eslint\\//",
+				"typescript",
+				"typescript-eslint",
+				"vitest",
+				"/^@vitest\\//",
+				"/^@testing-library\\//",
+				"prettier",
+				"turbo"
+			],
+			groupName: "npm dev tooling",
+			groupSlug: "npm-dev-tooling",
+			automerge: false,
+		},
+		{
+			description: "Group React core packages",
+			matchManagers: [
+				"npm"
+			],
+			matchPackageNames: [
+				"react",
+				"react-dom",
+				"/^@types\\/react/"
+			],
+			groupName: "React core",
+			groupSlug: "react-core",
+			automerge: false,
+		},
+		{
+			description: "Require manual review for major npm updates",
+			matchManagers: [
+				"npm"
+			],
+			matchUpdateTypes: [
+				"major"
+			],
+			dependencyDashboardApproval: true,
+			automerge: false,
+		},
+		{
+			description: "Stability window for npm updates",
+			matchManagers: [
+				"npm"
+			],
+			minimumReleaseAge: "3 days",
+			automerge: false,
+		},
+		{
 			description: "Auto-merge GitHub Actions",
 			matchManagers: [
 				"github-actions"
 			],
 			automerge: true,
-			automergeType: "branch",
+			automergeType: "pr",
 			matchUpdateTypes: [
 				"minor",
 				"patch",
@@ -90,7 +156,7 @@
 				"/^renovatebot\//"
 			],
 			automerge: true,
-			automergeType: "branch",
+			automergeType: "pr",
 			matchUpdateTypes: [
 				"minor",
 				"patch",
