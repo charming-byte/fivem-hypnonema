@@ -1,3 +1,5 @@
+<div align="center">
+
 # Hypnonema 🎬🎥
 
 ![GitHub Repo stars](https://img.shields.io/github/stars/charming-byte/fivem-hypnonema?style=social)
@@ -20,6 +22,8 @@
 </div>
 
 [![Hypnonema](https://raw.githubusercontent.com/charming-byte/fivem-hypnonema/gh-pages/Hypnonema.jpg)](https://raw.githubusercontent.com/charming-byte/fivem-hypnonema/gh-pages/HypnonemaTitle.jpg "Hypnonema")
+
+</div>
 
 ## 📌 Table of Contents
 
