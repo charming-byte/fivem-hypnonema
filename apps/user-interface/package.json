@@ -61,7 +61,7 @@
 		"vite-plugin-singlefile": "^2.1.0",
 		"vite-plugin-svgr": "^4.3.0",
 		"vite-tsconfig-paths": "^5.1.4",
-		"vitest": "^3.2.4",
+		"vitest": "^3.2.7",
 		"yaml": "^2.9.0"
 	}
 }
