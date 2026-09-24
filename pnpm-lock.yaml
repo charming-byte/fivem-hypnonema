@@ -84,8 +84,8 @@ importers:
         specifier: ^7.18.4
         version: 7.18.4(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       simplebar:
-        specifier: ^6.3.0
-        version: 6.3.2
+        specifier: ^6.3.3
+        version: 6.3.3
       simplebar-react:
         specifier: ^3.3.2
         version: 3.3.2(react@19.2.1)
@@ -2893,8 +2893,8 @@ packages:
     peerDependencies:
       react: '>=16.8.0'
 
-  simplebar@6.3.2:
-    resolution: {integrity: sha512-l4P1Oma0nply0g+pkrkwfC1SF5WDnIHrgiQDXSDzIdjngUDLkPgZcPGKrOvuFeXoSensfKijjIjDlUJSEp+mLQ==}
+  simplebar@6.3.3:
+    resolution: {integrity: sha512-ni9cIiA8GRitiaenV7A/gh8nTStiVqO3gLxrfCMmq6CSy/pB+fz+QxqvJLo142QHb2Tvgvr8ILwZxf3qzAq7pg==}
 
   snake-case@3.0.4:
     resolution: {integrity: sha512-LAOh4z89bGQvl9pFfNF8V146i7o7/CqFPbqzYgP+yYzDIDeS9HaNFtXABamRW+AQzEVODcvE79ljJ+8a9YSdMg==}
@@ -6293,7 +6293,7 @@ snapshots:
       react: 19.2.1
       simplebar-core: 1.3.2
 
-  simplebar@6.3.2:
+  simplebar@6.3.3:
     dependencies:
       simplebar-core: 1.3.2
 
