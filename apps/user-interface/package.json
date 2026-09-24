@@ -41,7 +41,7 @@
 		"react-router": "^7.7.0",
 		"simplebar": "^6.3.0",
 		"simplebar-react": "^3.3.2",
-		"styled-components": "^6.1.11"
+		"styled-components": "^6.5.3"
 	},
 	"devDependencies": {
 		"@hypnonema/eslint-config": "workspace:*",
