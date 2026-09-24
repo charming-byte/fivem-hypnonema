@@ -72,8 +72,8 @@ importers:
         specifier: ^19.1.0
         version: 19.2.1(react@19.2.1)
       react-hook-form:
-        specifier: ^7.60.0
-        version: 7.60.0(react@19.2.1)
+        specifier: ^7.88.0
+        version: 7.88.0(react@19.2.1)
       react-knob-headless:
         specifier: 0.4.0
         version: 0.4.0(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
@@ -2674,8 +2674,8 @@ packages:
     peerDependencies:
       react: ^19.2.1
 
-  react-hook-form@7.60.0:
-    resolution: {integrity: sha512-SBrYOvMbDB7cV8ZfNpaiLcgjH/a1c7aK0lK+aNigpf4xWLO8q+o4tcvVurv3c4EOyzn/3dCsYt4GKD42VvJ/+A==}
+  react-hook-form@7.88.0:
+    resolution: {integrity: sha512-QRaLOWhX93YCnMiRfnOFRSwWXZNt8qhm2JTZwypoDvKpSffTJHmpzMXt8U6PV5UThvL3IiiLDUWe2nHMtz6Mmw==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18 || ^19
@@ -6021,7 +6021,7 @@ snapshots:
       react: 19.2.1
       scheduler: 0.27.0
 
-  react-hook-form@7.60.0(react@19.2.1):
+  react-hook-form@7.88.0(react@19.2.1):
     dependencies:
       react: 19.2.1
 
