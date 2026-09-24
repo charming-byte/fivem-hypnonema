@@ -78,6 +78,19 @@
 			"groupSlug": "microsoft-dotnet"
 		},
 		{
+			description: "Group all other non-major npm updates to cut down on pnpm-lock.yaml conflicts between parallel PRs",
+			matchManagers: [
+				"npm"
+			],
+			matchUpdateTypes: [
+				"minor",
+				"patch"
+			],
+			groupName: "npm minor and patch dependencies",
+			groupSlug: "npm-minor-patch",
+			automerge: false,
+		},
+		{
 			description: "Group npm dev tooling across the monorepo",
 			matchManagers: [
 				"npm"
