@@ -30,7 +30,7 @@
 		"@hypnonema/generated-types": "workspace:*",
 		"@mui/icons-material": "^6.4.4",
 		"@mui/material": "^6.4.4",
-		"framer-motion": "^12.4.2",
+		"framer-motion": "^12.43.0",
 		"lodash.debounce": "^4.0.8",
 		"notistack": "^3.0.2",
 		"react": "^19.3.0",
