@@ -1,0 +1,460 @@
+models: 
+  - 
+    label: Radio
+    prop: prop_radio_01
+  - 
+    label: Boombox
+    prop: prop_boombox_01
+  - 
+    label: Boombox
+    prop: prop_portable_hifi_01
+  - 
+    label: Boombox
+    prop: prop_ghettoblast_01
+  - 
+    label: Boombox
+    prop: prop_ghettoblast_02
+  - 
+    label: "Tape Player"
+    prop: prop_tapeplayer_01
+  - 
+    label: Jukebox
+    prop: bkr_prop_clubhouse_jukebox_01a
+  - 
+    label: Jukebox
+    prop: bkr_prop_clubhouse_jukebox_01b
+  - 
+    label: Jukebox
+    prop: bkr_prop_clubhouse_jukebox_02a
+  - 
+    label: Jukebox
+    prop: ch_prop_arcade_jukebox_01a
+  - 
+    label: Jukebox
+    prop: prop_50s_jukebox
+  - 
+    label: Jukebox
+    prop: prop_jukebox_01
+  - 
+    label: Radio
+    prop: v_res_j_radio
+  - 
+    label: "Alarm Clock"
+    prop: v_res_fa_radioalrm
+  - 
+    label: "MP3 Dock"
+    prop: prop_mp3_dock
+  - 
+    label: "MP3 Dock"
+    prop: v_res_mm_audio
+  - 
+    label: Radio
+    prop: sm_prop_smug_radio_01
+  - 
+    label: TV
+    prop: ex_prop_ex_tv_flat_01
+    renderTarget: ex_tvscreen
+  - 
+    label: TV
+    prop: prop_tv_flat_01
+    renderTarget: tvscreen
+  - 
+    label: TV
+    prop: prop_tv_flat_02
+    renderTarget: tvscreen
+  - 
+    label: TV
+    prop: prop_tv_flat_02b
+    renderTarget: tvscreen
+  - 
+    label: TV
+    prop: prop_tv_flat_03
+    renderTarget: tvscreen
+  - 
+    label: TV
+    prop: prop_tv_flat_03b
+    renderTarget: tvscreen
+  - 
+    label: TV
+    prop: prop_tv_flat_michael
+    renderTarget: tvscreen
+  - 
+    label: Monitor
+    prop: prop_monitor_w_large
+    renderTarget: tvscreen
+  - 
+    label: Tablet
+    prop: hei_prop_dlc_tablet
+    renderTarget: tablet
+  - 
+    label: TV
+    prop: prop_trev_tv_01
+    renderTarget: tvscreen
+  - 
+    label: TV
+    prop: prop_tv_02
+    renderTarget: tvscreen
+  - 
+    label: TV
+    prop: prop_tv_03
+    renderTarget: tvscreen
+  - 
+    label: TV
+    prop: prop_tv_03_overlay
+    renderTarget: tvscreen
+  - 
+    label: Laptop
+    prop: prop_laptop_lester2
+    renderTarget: tvscreen
+  - 
+    label: TV
+    prop: des_tvsmash_start
+    renderTarget: tvscreen
+  - 
+    label: TV
+    prop: prop_flatscreen_overlay
+    renderTarget: tvscreen
+  - 
+    label: Monitor
+    prop: prop_monitor_02
+    renderTarget: tvscreen
+  - 
+    label: Cinema
+    prop: prop_big_cin_screen
+    renderTarget: cinscreen
+  - 
+    label: Cinema
+    prop: v_ilev_cin_screen
+    renderTarget: cinscreen
+  - 
+    label: Projector
+    prop: v_ilev_lest_bigscreen
+    renderTarget: tvscreen
+  - 
+    label: Projector
+    prop: v_ilev_mm_screen
+    renderTarget: big_disp
+  - 
+    label: Projector
+    prop: v_ilev_mm_screen2
+    renderTarget: tvscreen
+  - 
+    label: Computer
+    prop: ba_prop_battle_club_computer_01
+    renderTarget: club_computer
+  - 
+    label: Laptop
+    prop: ba_prop_club_laptop_dj
+    renderTarget: laptop_dj
+  - 
+    label: Laptop
+    prop: ba_prop_club_laptop_dj_02
+    renderTarget: laptop_dj_02
+  - 
+    label: Computer
+    prop: sm_prop_smug_monitor_01
+    renderTarget: smug_monitor_01
+  - 
+    label: TV
+    prop: xm_prop_x17_tv_flat_01
+    renderTarget: tv_flat_01
+  - 
+    label: TV
+    prop: sm_prop_smug_tv_flat_01
+    renderTarget: tv_flat_01
+  - 
+    label: Monitor
+    prop: xm_prop_x17_computer_02
+    renderTarget: monitor_02
+  - 
+    label: Screen
+    prop: xm_prop_x17_screens_02a_01
+    renderTarget: prop_x17_8scrn_01
+  - 
+    label: Screen
+    prop: xm_prop_x17_screens_02a_02
+    renderTarget: prop_x17_8scrn_02
+  - 
+    label: Screen
+    prop: xm_prop_x17_screens_02a_03
+    renderTarget: prop_x17_8scrn_03
+  - 
+    label: Screen
+    prop: xm_prop_x17_screens_02a_04
+    renderTarget: prop_x17_8scrn_04
+  - 
+    label: Screen
+    prop: xm_prop_x17_screens_02a_05
+    renderTarget: prop_x17_8scrn_05
+  - 
+    label: Screen
+    prop: xm_prop_x17_screens_02a_06
+    renderTarget: prop_x17_8scrn_06
+  - 
+    label: Screen
+    prop: xm_prop_x17_screens_02a_07
+    renderTarget: prop_x17_8scrn_07
+  - 
+    label: Screen
+    prop: xm_prop_x17_screens_02a_08
+    renderTarget: prop_x17_8scrn_08
+  - 
+    label: TV
+    prop: xm_prop_x17_tv_ceiling_scn_01
+    renderTarget: prop_x17_tv_ceil_scn_01
+  - 
+    label: TV
+    prop: xm_prop_x17_tv_ceiling_scn_02
+    renderTarget: prop_x17_tv_ceil_scn_02
+  - 
+    label: TV
+    prop: xm_prop_x17_tv_scrn_01
+    renderTarget: prop_x17_tv_scrn_01
+  - 
+    label: TV
+    prop: xm_prop_x17_tv_scrn_02
+    renderTarget: prop_x17_tv_scrn_02
+  - 
+    label: TV
+    prop: xm_prop_x17_tv_scrn_03
+    renderTarget: prop_x17_tv_scrn_03
+  - 
+    label: TV
+    prop: xm_prop_x17_tv_scrn_04
+    renderTarget: prop_x17_tv_scrn_04
+  - 
+    label: TV
+    prop: xm_prop_x17_tv_scrn_05
+    renderTarget: prop_x17_tv_scrn_05
+  - 
+    label: TV
+    prop: xm_prop_x17_tv_scrn_06
+    renderTarget: prop_x17_tv_scrn_06
+  - 
+    label: TV
+    prop: xm_prop_x17_tv_scrn_07
+    renderTarget: prop_x17_tv_scrn_07
+  - 
+    label: TV
+    prop: xm_prop_x17_tv_scrn_08
+    renderTarget: prop_x17_tv_scrn_08
+  - 
+    label: TV
+    prop: xm_prop_x17_tv_scrn_09
+    renderTarget: prop_x17_tv_scrn_09
+  - 
+    label: TV
+    prop: xm_prop_x17_tv_scrn_10
+    renderTarget: prop_x17_tv_scrn_10
+  - 
+    label: TV
+    prop: xm_prop_x17_tv_scrn_11
+    renderTarget: prop_x17_tv_scrn_11
+  - 
+    label: TV
+    prop: xm_prop_x17_tv_scrn_12
+    renderTarget: prop_17_tv_scrn_12
+  - 
+    label: TV
+    prop: xm_prop_x17_tv_scrn_13
+    renderTarget: prop_x17_tv_scrn_13
+  - 
+    label: TV
+    prop: xm_prop_x17_tv_scrn_14
+    renderTarget: prop_x17_tv_scrn_14
+  - 
+    label: TV
+    prop: xm_prop_x17_tv_scrn_15
+    renderTarget: prop_x17_tv_scrn_15
+  - 
+    label: TV
+    prop: xm_prop_x17_tv_scrn_16
+    renderTarget: prop_x17_tv_scrn_16
+  - 
+    label: TV
+    prop: xm_prop_x17_tv_scrn_17
+    renderTarget: prop_x17_tv_scrn_17
+  - 
+    label: TV
+    prop: xm_prop_x17_tv_scrn_18
+    renderTarget: prop_x17_tv_scrn_18
+  - 
+    label: TV
+    prop: xm_prop_x17_tv_scrn_19
+    renderTarget: prop_x17_tv_scrn_19
+  - 
+    label: Screen
+    prop: xm_screen_1
+    renderTarget: prop_x17_tv_ceiling_01
+  - 
+    label: Computer
+    prop: ex_prop_monitor_01_ex
+    renderTarget: prop_ex_computer_screen
+  - 
+    label: Laptop
+    prop: gr_prop_gr_laptop_01a
+    renderTarget: gr_bunker_laptop_01a
+  - 
+    label: Laptop
+    prop: gr_prop_gr_laptop_01b
+    renderTarget: gr_bunker_laptop_sq_01a
+  - 
+    label: Monitor
+    prop: gr_prop_gr_trailer_monitor_01
+    renderTarget: gr_trailer_monitor_01
+  - 
+    label: Monitor
+    prop: gr_prop_gr_trailer_monitor_02
+    renderTarget: gr_trailer_monitor_02
+  - 
+    label: Monitor
+    prop: gr_prop_gr_trailer_monitor_03
+    renderTarget: gr_trailer_monitor_03
+  - 
+    label: TV
+    prop: gr_prop_gr_trailer_tv
+    renderTarget: gr_trailertv_01
+  - 
+    label: TV
+    prop: gr_prop_gr_trailer_tv_02
+    renderTarget: gr_trailertv_02
+  - 
+    label: Projector
+    prop: hei_prop_dlc_heist_board
+    renderTarget: heist_brd
+  - 
+    label: Monitor
+    prop: hei_prop_hei_monitor_overlay
+    renderTarget: hei_mon
+  - 
+    label: Blimp
+    prop: sr_mp_spec_races_blimp_sign
+    renderTarget: blimp_text
+  - 
+    label: "Orbital Cannon"
+    prop: xm_prop_orbital_cannon_table
+    renderTarget: orbital_table
+  - 
+    label: Laptop
+    prop: imp_prop_impexp_lappy_01a
+    renderTarget: prop_impexp_lappy_01a
+  - 
+    label: Digiscanner
+    prop: w_am_digiscanner
+    renderTarget: digiscanner
+  - 
+    label: Phone
+    prop: prop_phone_cs_frank
+    renderTarget: npcphone
+  - 
+    label: Phone
+    prop: prop_phone_proto
+    renderTarget: npcphone
+  - 
+    label: Screen
+    prop: prop_huge_display_01
+    renderTarget: big_disp
+  - 
+    label: Screen
+    prop: prop_huge_display_02
+    renderTarget: big_disp
+  - 
+    label: Whiteboard
+    prop: hei_prop_hei_muster_01
+    renderTarget: planning
+  - 
+    label: Tablet
+    prop: ba_prop_battle_hacker_screen
+    renderTarget: prop_battle_touchscreen_rt
+  - 
+    label: Panel
+    prop: xm_prop_x17_sec_panel_01
+    renderTarget: prop_x17_p_01
+  - 
+    label: Laptop
+    prop: bkr_prop_clubhouse_laptop_01a
+    renderTarget: prop_clubhouse_laptop_01a
+  - 
+    label: Laptop
+    prop: bkr_prop_clubhouse_laptop_01b
+    renderTarget: prop_clubhouse_laptop_01a
+  - 
+    label: TV
+    prop: prop_tv_flat_01_screen
+    renderTarget: tvscreen
+  - 
+    label: Laptop
+    prop: hei_prop_hst_laptop
+    renderTarget: tvscreen
+  - 
+    label: Laptop
+    prop: hei_bank_heist_laptop
+    renderTarget: tvscreen
+  - 
+    label: Screen
+    prop: xm_prop_x17dlc_monitor_wall_01a
+    renderTarget: prop_x17dlc_monitor_wall_01a
+  - 
+    label: TV
+    prop: ch_prop_ch_tv_rt_01a
+    renderTarget: ch_tv_rt_01a
+  - 
+    label: TV
+    prop: apa_mp_h_str_avunitl_01_b
+    renderTarget: tvscreen
+  - 
+    label: TV
+    prop: apa_mp_h_str_avunitl_04
+    renderTarget: tvscreen
+  - 
+    label: TV
+    prop: apa_mp_h_str_avunitm_01
+    renderTarget: tvscreen
+  - 
+    label: TV
+    prop: apa_mp_h_str_avunitm_03
+    renderTarget: tvscreen
+  - 
+    label: TV
+    prop: apa_mp_h_str_avunits_01
+    renderTarget: tvscreen
+  - 
+    label: TV
+    prop: apa_mp_h_str_avunits_04
+    renderTarget: tvscreen
+  - 
+    label: TV
+    prop: hei_heist_str_avunitl_03
+    renderTarget: tvscreen
+  - 
+    label: TV
+    prop: xs_prop_arena_screen_tv_01
+    renderTarget: screen_tv_01
+  - 
+    label: Jumbotron
+    prop: xs_prop_arena_bigscreen_01
+    renderTarget: bigscreen_01
+  - 
+    label: "Arcade Machine"
+    prop: vw_prop_vw_arcade_01_screen
+    renderTarget: arcade_01a_screen
+  - 
+    label: "Arcade Machine"
+    prop: vw_prop_vw_arcade_02_screen
+    renderTarget: arcade_02a_screen
+  - 
+    label: "Arcade Machine"
+    prop: vw_prop_vw_arcade_02b_screen
+    renderTarget: arcade_02b_screen
+  - 
+    label: "Arcade Machine"
+    prop: vw_prop_vw_arcade_02c_screen
+    renderTarget: arcade_02c_screen
+  - 
+    label: "Arcade Machine"
+    prop: vw_prop_vw_arcade_02d_screen
+    renderTarget: arcade_02d_screen
+  - 
+    label: TV
+    prop: vw_prop_vw_cinema_tv_01
+    renderTarget: tvscreen

@@ -1,0 +1,9 @@
+{
+  "name": "@hypnonema/shared-library",
+  "private": true,
+  "version": "2.0.0",
+  "scripts": {
+    "build": "dotnet build -o dist",
+    "restore": "dotnet restore"
+  }
+}

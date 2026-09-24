@@ -1,0 +1,16 @@
+* text=auto eol=lf
+
+*.sh    text eol=lf
+*.bat   text eol=crlf
+*.cs    text eol=crlf
+*.sln   text eol=crlf
+*.csproj text eol=crlf
+
+*.png binary
+*.jpg binary
+*.gfx binary
+*.ytd binary
+*.ydr binary
+*.ymap binary
+*.ytyp binary
+*.zip binary

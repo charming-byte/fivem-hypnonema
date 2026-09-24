@@ -1,0 +1,12 @@
+{
+    "name": "@hypnonema/client-script",
+    "private": true,
+    "version": "2.0.0",
+    "scripts": {
+        "build" : "pnpm run restore && dotnet build",
+        "restore": "dotnet restore"
+    },
+    "dependencies": {
+        "@hypnonema/shared-library": "workspace:*"
+    }
+}

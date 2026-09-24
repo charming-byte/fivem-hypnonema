@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "composite": false,
+    "declaration": true,
+    "declarationMap": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "inlineSources": false,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "preserveWatchOutput": true,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
+    "strict": true
+  },
+  "exclude": ["node_modules"]
+}

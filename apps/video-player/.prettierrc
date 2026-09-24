@@ -1,0 +1,11 @@
+{
+  "trailingComma": "all",
+  "tabWidth": 2,
+  "useTabs": true,
+  "semi": true,
+  "singleQuote": true,
+  "printWidth": 100,
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "importOrder": ["^@hypnonema/(.*)$", "^@components/(.*)$", "^@/(.*)$", "^[./]"]
+}

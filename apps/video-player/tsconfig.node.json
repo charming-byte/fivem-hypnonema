@@ -1,0 +1,23 @@
+{
+  "extends": "@hypnonema/typescript-config/vite.json",
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
+    "target": "ES2023",
+    "lib": ["ES2023"],
+
+    /* Bundler mode */
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+    "declaration": false,
+    "declarationMap": false,
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["./*"],
+      "@components/*": ["./components/*"]
+    },
+    /* Linting */
+    "erasableSyntaxOnly": true,
+    "noUncheckedSideEffectImports": true
+  },
+  "include": ["vite.config.ts"]
+}

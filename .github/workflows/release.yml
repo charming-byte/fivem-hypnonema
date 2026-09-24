@@ -1,0 +1,134 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  version:
+    name: Calculate Version
+    runs-on: ubuntu-latest
+    outputs:
+      semVer: ${{ steps.gitversion.outputs.semVer }}
+      assemblySemVer: ${{ steps.gitversion.outputs.assemblySemVer }}
+      alreadyReleased: ${{ steps.guard.outputs.exists }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install GitVersion
+        uses: gittools/actions/gitversion/setup@v0.13.6
+        with:
+          versionSpec: "5.x"
+
+      - name: Determine version
+        id: gitversion
+        uses: gittools/actions/gitversion/execute@v0.13.6
+        with:
+          useConfigFile: true
+          configFilePath: ./.github/version.yml
+
+      - name: Guard against duplicate release
+        id: guard
+        run: |
+          if git rev-parse -q --verify "refs/tags/v${{ steps.gitversion.outputs.semVer }}" >/dev/null; then
+            echo "Tag v${{ steps.gitversion.outputs.semVer }} already exists - nothing to release."
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
+
+  release:
+    name: Build & Release
+    needs: version
+    if: needs.version.outputs.alreadyReleased == 'false'
+    runs-on: windows-latest
+    env:
+      VERSION: ${{ needs.version.outputs.semVer }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          # default GITHUB_TOKEN, kept in the local config so the changelog
+          # commit and the tag can be pushed back to main.
+          persist-credentials: true
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Restore .NET tools
+        working-directory: apps/server-script
+        run: dotnet tool restore
+
+      - name: Build
+        run: pnpm build
+
+      - name: Assemble resources
+        shell: bash
+        run: .github/scripts/assemble-resource.sh "${VERSION}"
+
+      # git-cliff via the npm distribution - the git-cliff GitHub Action is a
+      # Linux Docker action and would not run on the Windows runner.
+      - name: Generate changelog & release notes
+        shell: bash
+        run: |
+          pnpm dlx git-cliff@2 --config cliff.toml --tag "v${VERSION}" --output CHANGELOG.md
+          pnpm dlx git-cliff@2 --config cliff.toml --tag "v${VERSION}" --unreleased --strip all --output RELEASE_NOTES.md \
+            || printf '_No noteworthy changes recorded for this release._\n' > RELEASE_NOTES.md
+          echo "----- RELEASE_NOTES.md -----"
+          cat RELEASE_NOTES.md
+
+      - name: Create and push tag
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git tag -a "v${VERSION}" -m "v${VERSION}"
+          git push origin "v${VERSION}"
+
+      - name: Publish GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ env.VERSION }}
+          name: v${{ env.VERSION }}
+          body_path: RELEASE_NOTES.md
+          files: dist/hypnonema-${{ env.VERSION }}.zip
+          draft: false
+          prerelease: false
+
+      # Best effort: keep CHANGELOG.md in the repo up to date. Requires `main` to
+      # allow pushes from github-actions[bot]; if the branch is protected this
+      # step is skipped without failing the release (the notes are already on the
+      # release itself).
+      - name: Commit changelog back to main
+        continue-on-error: true
+        shell: bash
+        run: |
+          if ! git diff --quiet -- CHANGELOG.md; then
+            git add CHANGELOG.md
+            git commit -m "chore(release): v${VERSION} [skip ci]"
+            git push origin HEAD:main
+          fi
