@@ -15,6 +15,15 @@
 	dependencyDashboardTitle: "Renovate Dashboard",
 	"rangeStrategy": "bump",
 	"rebaseWhen": "auto",
+	"postUpdateOptions": [
+		"pnpmDedupe"
+	],
+	"lockFileMaintenance": {
+		"enabled": true,
+		"schedule": [
+			"before 4am on monday"
+		]
+	},
 	"packageRules": [
 		{
 			"description": "Group all non-major NuGet updates",
