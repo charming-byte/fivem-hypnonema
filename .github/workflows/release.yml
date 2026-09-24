@@ -21,7 +21,7 @@ jobs:
       assemblySemVer: ${{ steps.gitversion.outputs.assemblySemVer }}
       alreadyReleased: ${{ steps.guard.outputs.exists }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
@@ -55,7 +55,7 @@ jobs:
     env:
       VERSION: ${{ needs.version.outputs.semVer }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
           # default GITHUB_TOKEN, kept in the local config so the changelog
