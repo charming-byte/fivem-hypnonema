@@ -59,7 +59,7 @@ jobs:
         run: .github/scripts/assemble-resource.sh "ci-${{ github.sha }}"
 
       - name: Upload resource artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: hypnonema-ci
           path: |
