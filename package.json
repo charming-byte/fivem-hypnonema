@@ -12,6 +12,6 @@
     "prettier": "^3.2.5",
     "turbo": "^2.5.4"
   },
-  "packageManager": "pnpm@10.34.5",
+  "packageManager": "pnpm@10.34.6",
   "name": "hypnonema"
 }
