@@ -136,11 +136,11 @@ importers:
         specifier: ^0.14.5
         version: 0.14.5(eslint@9.39.1)(optionator@0.9.4)(typescript@5.8.3)(vite@6.4.3(@types/node@24.10.1)(sass@1.89.2)(yaml@2.9.1))
       vite-plugin-singlefile:
-        specifier: ^2.1.0
-        version: 2.3.0(rollup@4.45.1)(vite@6.4.3(@types/node@24.10.1)(sass@1.89.2)(yaml@2.9.1))
+        specifier: ^2.3.4
+        version: 2.3.4(vite@6.4.3(@types/node@24.10.1)(sass@1.89.2)(yaml@2.9.1))
       vite-plugin-svgr:
         specifier: ^4.5.0
-        version: 4.5.0(rollup@4.45.1)(typescript@5.8.3)(vite@6.4.3(@types/node@24.10.1)(sass@1.89.2)(yaml@2.9.1))
+        version: 4.5.0(typescript@5.8.3)(vite@6.4.3(@types/node@24.10.1)(sass@1.89.2)(yaml@2.9.1))
       vite-tsconfig-paths:
         specifier: ^5.1.4
         version: 5.1.4(typescript@5.8.3)(vite@6.4.3(@types/node@24.10.1)(sass@1.89.2)(yaml@2.9.1))
@@ -209,8 +209,8 @@ importers:
         specifier: ^7.3.6
         version: 7.3.6(@types/node@24.10.1)(sass@1.89.2)(yaml@2.9.1)
       vite-plugin-singlefile:
-        specifier: ^2.3.0
-        version: 2.3.0(rollup@4.45.1)(vite@7.3.6(@types/node@24.10.1)(sass@1.89.2)(yaml@2.9.1))
+        specifier: ^2.3.4
+        version: 2.3.4(vite@7.3.6(@types/node@24.10.1)(sass@1.89.2)(yaml@2.9.1))
       vite-tsconfig-paths:
         specifier: ^5.1.4
         version: 5.1.4(typescript@5.8.3)(vite@7.3.6(@types/node@24.10.1)(sass@1.89.2)(yaml@2.9.1))
@@ -3377,12 +3377,15 @@ packages:
       vue-tsc:
         optional: true
 
-  vite-plugin-singlefile@2.3.0:
-    resolution: {integrity: sha512-DAcHzYypM0CasNLSz/WG0VdKOCxGHErfrjOoyIPiNxTPTGmO6rRD/te93n1YL/s+miXq66ipF1brMBikf99c6A==}
+  vite-plugin-singlefile@2.3.4:
+    resolution: {integrity: sha512-1FAhlTCL6KJDpSUudrVU+gspapvS+tmKCg70vwNaAU6tyXn3E/C6+NnwQIze06byhBRv7VggZ78K0h+J/Rsdrg==}
     engines: {node: '>18.0.0'}
     peerDependencies:
-      rollup: ^4.44.1
-      vite: ^5.4.11 || ^6.0.0 || ^7.0.0
+      rollup: ^4.59.0
+      vite: ^5.4.21 || ^6.0.0 || ^7.0.0 || ^8.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
 
   vite-plugin-svgr@4.5.0:
     resolution: {integrity: sha512-W+uoSpmVkSmNOGPSsDCWVW/DDAyv+9fap9AZXBvWiQqrboJ08j2vh0tFxTD/LjwqwAd3yYSVJgm54S/1GhbdnA==}
@@ -4346,13 +4349,11 @@ snapshots:
 
   '@rolldown/pluginutils@1.0.0-beta.27': {}
 
-  '@rollup/pluginutils@5.2.0(rollup@4.45.1)':
+  '@rollup/pluginutils@5.2.0':
     dependencies:
       '@types/estree': 1.0.8
       estree-walker: 2.0.2
       picomatch: 4.0.7
-    optionalDependencies:
-      rollup: 4.45.1
 
   '@rollup/rollup-android-arm-eabi@4.45.1':
     optional: true
@@ -6875,21 +6876,19 @@ snapshots:
       optionator: 0.9.4
       typescript: 5.8.3
 
-  vite-plugin-singlefile@2.3.0(rollup@4.45.1)(vite@6.4.3(@types/node@24.10.1)(sass@1.89.2)(yaml@2.9.1)):
+  vite-plugin-singlefile@2.3.4(vite@6.4.3(@types/node@24.10.1)(sass@1.89.2)(yaml@2.9.1)):
     dependencies:
-      micromatch: 4.0.8
-      rollup: 4.45.1
+      picomatch: 4.0.7
       vite: 6.4.3(@types/node@24.10.1)(sass@1.89.2)(yaml@2.9.1)
 
-  vite-plugin-singlefile@2.3.0(rollup@4.45.1)(vite@7.3.6(@types/node@24.10.1)(sass@1.89.2)(yaml@2.9.1)):
+  vite-plugin-singlefile@2.3.4(vite@7.3.6(@types/node@24.10.1)(sass@1.89.2)(yaml@2.9.1)):
     dependencies:
-      micromatch: 4.0.8
-      rollup: 4.45.1
+      picomatch: 4.0.7
       vite: 7.3.6(@types/node@24.10.1)(sass@1.89.2)(yaml@2.9.1)
 
-  vite-plugin-svgr@4.5.0(rollup@4.45.1)(typescript@5.8.3)(vite@6.4.3(@types/node@24.10.1)(sass@1.89.2)(yaml@2.9.1)):
+  vite-plugin-svgr@4.5.0(typescript@5.8.3)(vite@6.4.3(@types/node@24.10.1)(sass@1.89.2)(yaml@2.9.1)):
     dependencies:
-      '@rollup/pluginutils': 5.2.0(rollup@4.45.1)
+      '@rollup/pluginutils': 5.2.0
       '@svgr/core': 8.1.0(typescript@5.8.3)
       '@svgr/plugin-jsx': 8.1.0(@svgr/core@8.1.0(typescript@5.8.3))
       vite: 6.4.3(@types/node@24.10.1)(sass@1.89.2)(yaml@2.9.1)
