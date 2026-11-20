@@ -90,8 +90,8 @@ importers:
         specifier: ^3.3.2
         version: 3.3.2(react@19.3.0)
       styled-components:
-        specifier: ^6.5.3
-        version: 6.5.3(css-to-react-native@3.2.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+        specifier: ^6.6.0
+        version: 6.6.0(css-to-react-native@3.2.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
     devDependencies:
       '@hypnonema/eslint-config':
         specifier: workspace:*
@@ -1519,6 +1519,9 @@ packages:
 
   '@types/react@19.3.0':
     resolution: {integrity: sha512-N0rFCuH9YoxG9/m61l9MfpJKfmLOVU0em7ipIz6TRgSSkvReLB9vL85GB+yr8Bs5leqpvg96JSwF4ZS1s4viQg==}
+
+  '@types/stylis@4.2.7':
+    resolution: {integrity: sha512-VgDNokpBoKF+wrdvhAAfS55OMQpL6QRglwTwNC3kIgBrzZxA4WsFj+2eLfEA/uMUDzBcEhYmjSbwQakn/i3ajA==}
 
   '@typescript-eslint/eslint-plugin@8.39.0':
     resolution: {integrity: sha512-bhEz6OZeUR+O/6yx9Jk6ohX6H9JSFTaiY0v9/PuKT3oGK0rn0jNplLmyFUGV+a9gfYnVNwGDwS/UkLIuXNb2Rw==}
@@ -3115,8 +3118,8 @@ packages:
   strip-literal@3.0.0:
     resolution: {integrity: sha512-TcccoMhJOM3OebGhSBEmp3UZ2SfDMZUEBdRA/9ynfLi8yYajyWX3JiXArcJt4Umh4vISpspkQIY8ZZoCqjbviA==}
 
-  styled-components@6.5.3:
-    resolution: {integrity: sha512-vAX79sfpmUerP9fsTTxoTrBDE0RuO4ahjInyWYoohNgqrdg63Ms4q6FJ/o2Fyity82NU3cujOT8Ewl9TThBdwg==}
+  styled-components@6.6.0:
+    resolution: {integrity: sha512-drKKsqvDBxVRn4ySU67iQ5nQBuo/1xyYeBfdhDde112PkqrS3+95KPnpDs5hFRcmrW+q6+gbyywYYYR14oWFtw==}
     engines: {node: '>= 16'}
     peerDependencies:
       css-to-react-native: '>= 3.2.0'
@@ -4667,6 +4670,8 @@ snapshots:
   '@types/react@19.3.0':
     dependencies:
       csstype: 3.2.3
+
+  '@types/stylis@4.2.7': {}
 
   '@typescript-eslint/eslint-plugin@8.39.0(@typescript-eslint/parser@8.39.0(eslint@9.39.1)(typescript@5.8.3))(eslint@9.39.1)(typescript@5.8.3)':
     dependencies:
@@ -6643,9 +6648,10 @@ snapshots:
     dependencies:
       js-tokens: 9.0.1
 
-  styled-components@6.5.3(css-to-react-native@3.2.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0):
+  styled-components@6.6.0(css-to-react-native@3.2.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0):
     dependencies:
       '@emotion/is-prop-valid': 1.4.0
+      '@types/stylis': 4.2.7
       csstype: 3.2.3
       react: 19.3.0
       stylis: 4.3.6
