@@ -13,8 +13,8 @@
 	"dependencies": {
 		"@hypnonema/generated-types": "workspace:*",
 		"@xstate/react": "^6.1.0",
-		"react": "^19.3.0",
-		"react-dom": "^19.3.0",
+		"react": "^19.3.1",
+		"react-dom": "^19.3.1",
 		"react-player": "^3.4.0",
 		"xstate": "^5.33.2"
 	},
